@@ -19,7 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="..\src\credits.cpp" />
+    <ClCompile Include="..\src\enemy.cpp" />
+    <ClCompile Include="..\src\game.cpp" />
+    <ClCompile Include="..\src\gameOver.cpp" />
+    <ClCompile Include="..\src\gameplay.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\menu.cpp" />
+    <ClCompile Include="..\src\player.cpp" />
+    <ClCompile Include="..\src\textures.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\credits.h" />
+    <ClInclude Include="..\src\enemy.h" />
+    <ClInclude Include="..\src\game.h" />
+    <ClInclude Include="..\src\gameOver.h" />
+    <ClInclude Include="..\src\gameplay.h" />
+    <ClInclude Include="..\src\menu.h" />
+    <ClInclude Include="..\src\player.h" />
+    <ClInclude Include="..\src\textures.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
