@@ -9,7 +9,7 @@ namespace Juego
 	Texture2D textureNave;
 	Texture2D textureEnemy;
 	Texture2D textureFont;
-
+	//cambio
 	void LoadTextures()
 	{
 		inave = LoadImage("res/nave.png");
