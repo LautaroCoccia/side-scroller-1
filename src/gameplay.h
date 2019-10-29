@@ -5,7 +5,6 @@
 
 namespace Juego
 {
-
 	void UpdateGame();
 	void InitGame();
 	void Draw();

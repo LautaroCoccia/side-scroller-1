@@ -2,12 +2,6 @@
 #define CREDITS_H
 namespace Juego
 {
-	namespace Credits_Section
-	{
-		void UpdateCreditsScreen();
-		void InitCreditsScreen();
-		bool FinishCreditsScreen();
-		void DrawCredits();
-	}
+	void DrawCredits();
 }
 #endif // CREDITS_H

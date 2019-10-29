@@ -16,13 +16,12 @@ namespace Juego
 		ienemy = LoadImage("res/enemigo.png");
 		ifont = LoadImage("res/fondelli.png");
 	
-		ImageResize(&ifont, screenWidth, screenHeight);
 
+		ImageResize(&ifont, screenWidth, screenHeight);
 
 		textureNave = LoadTextureFromImage(inave);
 		textureEnemy = LoadTextureFromImage(ienemy);
 		textureFont = LoadTextureFromImage(ifont);
-
 
 		UnloadImage(inave);
 		UnloadImage(ienemy);

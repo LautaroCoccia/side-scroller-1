@@ -7,32 +7,22 @@
 #include "textures.h"
 #include "player.h"
 #include "enemy.h"
-#include "menu.h"
 #include "credits.h"
-#include "gameOver.h"
+#include "menu.h"
 #include<iostream>
 
 static bool gameOver = false;
 static bool pause = false;
 using namespace Juego;
-using namespace Credits_Section;
-using namespace Menu_Section;
-using namespace GameOver_Section;
 namespace Juego {
-	enum gameActions
-	{
-		Game,
-		Credits,
-		Menu,
-		GameOver,
-	};
-	static int gamePhase;
-
+	bool initgame = false;
 	void InitGame(void)
 	{
+		initgame = true;
 		InitPlayer();
 		InitEnemy();
 		LoadTextures();
+		gameOver = false;
 	}
 	void UpdateGame(void)
 	{
@@ -72,6 +62,12 @@ namespace Juego {
 	{
 		BeginDrawing();
 		ClearBackground(BLACK);
+		DrawMenu();
+		if (MenuInput() == 1) InitGame();
+		else if (MenuInput() == 2) {//in progress
+			//DrawCredits();
+		}
+
 		DrawTexture(textureFont, screenWidth / 2 - textureFont.width / 2, screenHeight / 2 - textureFont.height / 2, WHITE);
 		if (!gameOver)
 		{
@@ -80,7 +76,9 @@ namespace Juego {
 			if (pause) DrawText("GAME PAUSED", screenWidth / 2 - MeasureText("GAME PAUSED", 40) / 2, screenHeight / 2 - 40, 40, GRAY);
 		}
 		else {
-			DrawText("PRESS [ENTER] TO PLAY AGAIN", GetScreenWidth() / 2 - MeasureText("PRESS [ENTER] TO PLAY AGAIN", 20) / 2, GetScreenHeight() / 2 - 50, 20, GRAY);
+			if(initgame)
+				DrawText("PRESS [ENTER] TO PLAY AGAIN", GetScreenWidth() / 2 - MeasureText("PRESS [ENTER] TO PLAY AGAIN", 20) / 2, GetScreenHeight() / 2 - 50, 20, GRAY);
+		
 		}
 		EndDrawing();
 	}

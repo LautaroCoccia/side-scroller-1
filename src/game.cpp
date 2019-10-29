@@ -1,10 +1,9 @@
 #include "game.h"
-#include "../src/gameplay.h"
-
+#include "gameplay.h"
 using namespace Juego;
 void Juego::Execute() {
 	InitWindow(screenWidth, screenHeight, "Arkanoid");
-	InitGame();
+	//InitGame();
 	SetTargetFPS(60);
 	while (!WindowShouldClose())
 	{
